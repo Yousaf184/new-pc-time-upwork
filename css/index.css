@@ -81,6 +81,43 @@ header nav {
     display: none;
 }
 
+.hide-overflow {
+    overflow: hidden;
+}
+
+/************* Collapsed navigation bar **************/
+.collapsed-nav-container .nav-items-container {
+    position: fixed;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 5px 10px;
+    box-sizing: border-box;
+    background-color: rgba(4, 52, 52, 0.95);
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.collapsed-nav-container .slideIn {
+    animation: slideIn 0.3s ease-out 0s 1 forwards;
+}
+
+.collapsed-nav-container .slideOut {
+    animation: slideOut 0.3s ease-out 0s 1 forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
 .welcome {
     padding: 40px 0 15px;
 }
@@ -365,7 +402,7 @@ footer div {
 @media (max-width: 660px) {
     header {
         justify-content: space-between;
-        padding: 0 35px;
+        padding: 10px 35px 0;
     }
 
     header nav {
@@ -373,8 +410,16 @@ footer div {
         align-self: center;
     }
 
-    .nav-item {
+    .nav-items-container {
         display: none;
+    }
+
+    /* styles to be used on nav-item in collapsed navbar */
+    .nav-item {
+        font-size: 1.7rem;
+        color: #fff;
+        margin: 15px 0;
+        padding: 16px;
     }
 
     .hamburger-menu-toggle {
@@ -447,7 +492,8 @@ footer div {
 
 @media (max-width: 435px) {
     header {
-        padding: 0 10px;
+        padding-left:  10px;
+        padding-right: 10px;
     }
 
     header .logo {

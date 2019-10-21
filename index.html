@@ -4,21 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./css/index.css">
   <title>Home | MySite</title>
 </head>
-<body>
+<body id="body">
   <header>
     <img src="./assets/logo.png" alt="logo" class="logo">
-    <nav>
-      <a class="nav-item active" href="">Home</a>
-      <a class="nav-item" href="">Services</a>
-      <a class="nav-item" href="">NPT Client Portal</a>
-      <a class="nav-item" href="">Why NPT</a>
-      <a class="nav-item" href="">Contact Us</a>
-      <img src="./assets/hamburger-menu.svg" alt="hamburger menu button" class="hamburger-menu-toggle">
+    <nav id="nav">
+      <span id="nav-items-container" class="nav-items-container">
+        <a class="nav-item active" href="#">Home</a>
+        <a class="nav-item" href="#">Services</a>
+        <a class="nav-item" href="#">NPT Client Portal</a>
+        <a class="nav-item" href="#">Why NPT</a>
+        <a class="nav-item" href="#">Contact Us</a>
+      </span>
+      <img
+        src="./assets/hamburger-menu.svg"
+        alt="hamburger menu button"
+        class="hamburger-menu-toggle"
+        id="hamburger-toggle"
+      />
     </nav>
   </header>
+
+  <!--
+    when navigation bar is collapsed, nav items will be moved in this
+    container via javascript
+  -->
+  <div id="collapsed-nav-container" class="collapsed-nav-container hide"></div>
 
   <main>
     <section class="welcome">
@@ -115,5 +128,7 @@
       <img src="./assets/grass.png" alt="green triangles">
     </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
