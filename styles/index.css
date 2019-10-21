@@ -1,0 +1,258 @@
+:root {
+    --text-color: #b1b7b7;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(4, 52, 52, 0.65), rgba(4, 52, 52, 0.65)),
+                url('../assets/bg-live1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.green {
+    color: #2e7c01;
+}
+
+.underlined-heading {
+    color: var(--text-color);
+    text-decoration: underline;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+section {
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 5px;
+    box-sizing: border-box;
+}
+
+section.white {
+    background-color: #fff;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 55px;
+}
+
+header nav {
+    align-self: flex-end;
+    padding: 34px 0;
+    box-sizing: border-box;
+}
+
+.nav-item {
+    font-size: 1.4rem;
+    padding: 16px;
+    margin: 0 3px;
+    color: #888;
+    text-decoration: none;
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+.nav-item.active,
+.nav-item:hover {
+    background-color: #45ba01;
+    color: #fff;
+}
+
+.welcome {
+    padding: 40px 0 15px;
+}
+
+.welcome__heading {
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.welcome__heading--secondary {
+    color: #2e7c01;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+.welcome__content {
+    color: var(--text-color);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.presence__content {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.presence .img-container {
+    position: relative;
+    text-align: center;
+}
+
+.img-container span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    color: #b1b7b7;
+}
+
+.presence .img-container img {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+}
+
+.presence .regions {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+.regions span {
+    font-size: 2rem;
+    margin: 60px 0 15px;
+}
+
+.customers {
+    margin-top: 60px;
+}
+
+.customers__logos--one,
+.customers__logos--two {
+    display: flex;
+    align-items: center;
+}
+
+.customers__logos--one {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.customers__logos--one img,
+.customers__logos--two img {
+    margin: 0 120px 0 0;
+}
+
+.customers__logos--one img:last-child {
+    margin-right: 30px;
+}
+
+.customers__logos--two img:first-child {
+    margin-left: 30px;
+}
+
+.customers__text {
+    font-size: 1.55rem;
+    color: #819775;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.partnerships .underlined-heading {
+    color: #2e7c01;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.partnerships__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.partnerships__logos img {
+    margin: 0 50px 0 0;
+}
+
+footer {
+    background-color: #fff;
+    margin-top: 150px;
+    font-size: 1.4rem;
+    padding: 30px 5px 10px;
+}
+
+footer .logo {
+    width: 199px;
+}
+
+footer div {
+    display: flex;
+}
+
+.footer__first {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    color: #3e3c09;
+    flex-direction: column;
+}
+
+.footer__first .social-links {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.social-links img {
+    margin: 0 0 0 5px;
+}
+
+.contact-info .address {
+    margin-bottom: 5px;
+}
+
+.footer__second {
+    width: 71%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footer__second span {
+    margin-right: 40px;
+    color: #848079;
+}
+
+@media (max-width: 1120px) {
+    .presence__content {
+        flex-direction: column;
+    }
+
+    .presence .regions {
+        align-items: center;
+    }
+
+    .regions span {
+        margin: 30px 0 5px;
+    }
+}
