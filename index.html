@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/index.css">
+  <!-- AOS library css file -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Home | MySite</title>
 </head>
 <body id="body">
@@ -73,13 +75,13 @@
     </section>
 
     <section class="customers white">
-      <div class="customers__logos">
+      <div class="customers__logos" data-aos="fade-left">
         <div class="customers__logos--one">
           <img src="./assets/elm-logo.png" alt="elm logo">
           <img src="./assets/saudi-logo.png" alt="logo">
           <img src="./assets/kaust-logo.png" alt="kaust logo">
         </div>
-        <div class="customers__logos--two">
+        <div class="customers__logos--two" data-aos="fade-left">
           <img src="./assets/isdb-logo.png" alt="isdb logo">
           <img src="./assets/sgs-logo.png" alt="sgs logo">
           <img src="./assets/huawei-logo.png" alt="huawei logo">
@@ -136,6 +138,15 @@
     </div>
   </footer>
 
+  <!-- AOS library js file -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/script.js"></script>
+  <!-- initialize AOS library -->
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000
+    });
+  </script>
 </body>
 </html>

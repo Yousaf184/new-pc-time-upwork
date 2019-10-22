@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/services.css">
+  <!-- AOS library css file -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Services | MySite</title>
 </head>
 <body id="body">
@@ -48,7 +50,7 @@
         we have a variety of Services (Business Units) to support
       </p>
 
-      <div class="services__titles">
+      <div class="services__titles" data-aos="fade-left">
         <div class="services__single-service">
           <span>Enterprise Solutions & Services</span>
         </div>
@@ -101,6 +103,15 @@
     </div>
   </footer>
 
-  <script src="../js/script.js"></script>
+  <!-- AOS library js file -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/script.js"></script>
+  <!-- initialize AOS library -->
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000
+    });
+  </script>
 </body>
 </html>
