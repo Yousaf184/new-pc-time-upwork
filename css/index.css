@@ -31,7 +31,6 @@
 }
 
 .presence__content {
-    width: 85%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -189,6 +188,15 @@
     }
 }
 
+
+@media (max-width: 780px) {
+    .welcome__heading,
+    .welcome__content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 @media (max-width: 660px) {
     .partnerships__logos {
         flex-direction: column;
@@ -208,10 +216,6 @@
     .customers__logos--one img,
     .customers__logos--two img {
         padding: 20px 0;
-    }
-
-    .presence__content {
-        width: 90%;
     }
 
     .img-container span {
