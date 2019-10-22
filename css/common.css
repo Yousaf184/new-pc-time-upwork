@@ -9,10 +9,11 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    /* height: 100vh; */
+    box-sizing: border-box;
+    overflow-x: hidden;
     background: linear-gradient(to right, rgba(4, 52, 52, 0.65), rgba(4, 52, 52, 0.65)),
                 url('../assets/bg-live1.png');
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
