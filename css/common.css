@@ -9,7 +9,7 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    height: 100vh;
+    /* height: 100vh; */
     background: linear-gradient(to right, rgba(4, 52, 52, 0.65), rgba(4, 52, 52, 0.65)),
                 url('../assets/bg-live1.png');
     background-size: 100% 100%;
@@ -105,10 +105,12 @@ header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 5px 10px;
+    justify-content: flex-start;
+    padding-top: 25px;
     box-sizing: border-box;
     background-color: rgba(4, 52, 52, 0.95);
     box-shadow: 1px 0 4px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
 }
 
 .collapsed-nav-container .slideIn {
@@ -272,9 +274,9 @@ footer .logo {
 
     /* styles to be used on nav-item in collapsed navbar */
     .nav-item {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         color: #fff;
-        margin: 15px 0;
+        margin: 8px 0;
         padding: 16px;
     }
 
