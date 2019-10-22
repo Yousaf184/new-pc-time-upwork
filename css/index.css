@@ -114,18 +114,20 @@
 }
 
 .partnerships__logos img {
-    margin: 0 50px 0 0;
+    margin: 20px 50px 0 0;
+}
+
+@media (min-width: 1201px) {
+    .customers__logos--one img,
+    .customers__logos--two img {
+        margin: 0 45px 0 0;
+    }
 }
 
 @media (max-width: 1300px) {
     .partnerships__logos img {
-        margin: 0 25px 0 0;
-    }
-}
-
-@media (max-width: 1206px) {
-    .partnerships__logos img:last-child {
-        margin-top: 25px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 }
 
