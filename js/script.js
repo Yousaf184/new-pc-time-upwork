@@ -1,21 +1,20 @@
 const $body = document.getElementById('body');
-const $hamburgerToggle = document.getElementById('hamburger-toggle');
+const $hamburgerOpen = document.getElementById('hamburger-menu');
+const $hamburgerClose = document.getElementById('hamburger-close');
 const $navItemsContainer = document.getElementById('nav-items-container');
 const $collapsedNavContainer = document.getElementById('collapsed-nav-container');
 const $nav = document.getElementById('nav');
 
-// will be used to idenitify whether to show close image or hamburger menu image
-const hamburgerCloseClass = 'hamburger-menu-close';
+$hamburgerOpen.addEventListener('click', (e) => {
+    // disable scrolling
+    $body.classList.add('hide-overflow');
+    showSideMenu();
+});
 
-$hamburgerToggle.addEventListener('click', (e) => {
-    // toggle scrolling
-    $body.classList.toggle('hide-overflow');
-
-    if (isCloseMenuIcon()) {
-        hideSideMenu();
-    } else {
-        showSideMenu();
-    }
+$hamburgerClose.addEventListener('click', (e) => {
+    // enable scrolling
+    $body.classList.remove('hide-overflow');
+    hideSideMenu();
 });
 
 $collapsedNavContainer.addEventListener('click', (e) => {
@@ -27,22 +26,9 @@ $collapsedNavContainer.addEventListener('click', (e) => {
     }
 });
 
-// returns true if clicked image is hamburger close image
-function isCloseMenuIcon() {
-    return $hamburgerToggle.classList.contains(hamburgerCloseClass);
-}
-
 function changeHamburgerMenuIcon() {
-    let iconPath = '';
-
-    if (isCloseMenuIcon()) {
-        iconPath = './assets/hamburger-menu.svg';
-    } else {
-        iconPath = './assets/close.svg';
-    }
-
-    $hamburgerToggle.classList.toggle(hamburgerCloseClass);
-    $hamburgerToggle.setAttribute('src', iconPath);
+    $hamburgerClose.classList.toggle('hide');
+    $hamburgerOpen.classList.toggle('hide');
 }
 
 function hideSideMenu() {
@@ -58,7 +44,7 @@ function hideSideMenu() {
         // remove animation classes from navItemcContainer
         $navItemsContainer.classList.remove('slideOut');
         $navItemsContainer.classList.remove('slideIn');
-    }, 400);
+    }, 350);
 }
 
 function showSideMenu() {

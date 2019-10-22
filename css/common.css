@@ -71,14 +71,18 @@ header nav {
     color: #fff;
 }
 
-.hamburger-menu-toggle {
-    vertical-align: middle;
+.hamburger-menu {
     display: none;
+}
+
+.hamburger-menu,
+.hamburger-close {
+    vertical-align: middle;
     cursor: pointer;
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .hide-overflow {
@@ -235,7 +239,7 @@ footer div {
         padding: 16px;
     }
 
-    .hamburger-menu-toggle {
+    .hamburger-menu {
         display: initial;
     }
 }
