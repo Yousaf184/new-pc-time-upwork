@@ -137,6 +137,7 @@ footer {
     margin-top: 150px;
     font-size: 1.4rem;
     padding: 30px 5px 10px;
+    box-sizing: border-box;
 }
 
 footer .content-wrapper {
