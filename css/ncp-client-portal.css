@@ -1,0 +1,46 @@
+body {
+    background-image: url('../assets/bg-npt-client.png');
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 500px;
+}
+
+main h1 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: #292929;
+    margin-top: 150px;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+}
+
+main h1:before,
+main h1:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.5px;
+    width: 70%;
+    background-color: #292929;
+}
+
+main h1:after {
+    top: 100%;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+@media (max-width: 370px) {
+    main h1 {
+        font-size: 5rem;
+    }
+}
