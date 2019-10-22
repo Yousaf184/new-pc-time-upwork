@@ -1,0 +1,27 @@
+.reasons__singleReason {
+    margin-top: 50px;
+}
+
+.reasons__singleReason:last-child {
+    border-bottom: 1px solid rgb(84, 98, 95);
+}
+
+.singleReason-title {
+    font-size: 1.7rem;
+}
+
+.singleReason-description {
+    color: rgb(169, 169, 169);
+    font-size: 1.7rem;
+    width: 435px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+@media (max-width: 520px) {
+    .singleReason-description {
+        width: 100%;
+    }
+}
