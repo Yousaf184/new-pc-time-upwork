@@ -68,6 +68,7 @@
 
 .customers {
     margin-top: 60px;
+    overflow-x: hidden;
 }
 
 .customers__logos--one,
